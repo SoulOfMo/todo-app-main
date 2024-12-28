@@ -5,6 +5,7 @@
 @import "./component/itemContainer";
 @import "./component/form";
 @import "./component/nav";
+@import "./component/action";
 
 #root {
   height: 100%;
@@ -26,10 +27,20 @@ main {
 
 .bg-dark {
   background-image: url(./images/bg-desktop-dark.jpg);
+  @media (max-width: 500px) {
+    background-image: url(./images/bg-mobile-dark.jpg);
+  }
 }
 
 .bg-light {
   background-image: url(./images/bg-desktop-light.jpg);
+  @media (max-width: 500px) {
+    background-image: url(./images/bg-mobile-light.jpg);
+  }
+}
+
+.active {
+  color: $bright-blue;
 }
 
 .container {
@@ -37,6 +48,11 @@ main {
   max-height: 700px;
   display: grid;
   gap: 2rem;
+
+  @media (max-width: 500px) {
+    width: 300px;
+    gap: 1.5rem;
+  }
   // position: sticky;
   // top: 30%;
   // left: 50%;

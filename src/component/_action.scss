@@ -1,0 +1,19 @@
+.actions.mobile {
+  font-size: 1.2rem;
+  background-color: var(--color-bg);
+  display: flex;
+  color: var(--color-text-secondary);
+  justify-content: space-between;
+  text-transform: capitalize;
+
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  &.mobile {
+    display: none;
+    @media (max-width: 500px) {
+      display: flex;
+      justify-content: unset;
+      gap: 1.5rem;
+      place-content: center;
+    }
+  }
+}

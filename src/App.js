@@ -60,6 +60,7 @@ function App() {
           onSorted={handleSorted}
           sortBy={sortBy}
         />
+        <Action onSorted={handleSorted} sortBy={sortBy} />
       </div>
     </main>
   );
@@ -194,6 +195,32 @@ function TodoList({
         </div>
         <p onClick={() => onClearList()}>Clear Completed</p>
       </div>
+    </div>
+  );
+}
+
+function Action({ sortBy, onSorted }) {
+  return (
+    <div className="actions mobile">
+      <span
+        className={sortBy === "all" ? "active" : ""}
+        onClick={(e) => onSorted(e.currentTarget.textContent)}
+      >
+        all
+      </span>
+
+      <span
+        className={sortBy === "active" ? "active" : ""}
+        onClick={(e) => onSorted(e.currentTarget.textContent)}
+      >
+        active
+      </span>
+      <span
+        className={sortBy === "completed" ? "active" : ""}
+        onClick={(e) => onSorted(e.currentTarget.textContent)}
+      >
+        completed
+      </span>
     </div>
   );
 }
