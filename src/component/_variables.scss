@@ -1,0 +1,30 @@
+//Primary Color
+$bright-blue: hsl(220, 98%, 61%);
+$gradient: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+/* Define Font Variables */
+$ff: "Josefin Sans", sans-serif;
+$ff-size: 1.8rem;
+$ff-sm: 400;
+$ff-lg: 700;
+
+:root {
+  /* Light Theme Colors */
+  --color-bg: hsl(0, 0%, 98%);
+  --color-surface: hsl(236, 33%, 92%);
+  --color-border: hsl(233, 11%, 84%);
+  --color-text-primary: hsl(235, 19%, 35%);
+  --color-text-secondary: hsl(236, 9%, 61%);
+  --color-text-hover: hsl(235, 21%, 11%);
+}
+
+// DARK THEME COLOR
+.dark {
+  --color-bg: hsl(235, 24%, 19%);
+  --color-surface: hsl(235, 21%, 11%);
+  --color-border: hsl(237, 14%, 26%);
+  --color-border2: hsl(233, 14%, 35%);
+  --color-text-primary: hsl(234, 39%, 85%);
+  --color-text-secondary: hsl(234, 11%, 52%);
+  --color-text-hover: hsl(236, 33%, 92%);
+}

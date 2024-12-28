@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import "./component/variables";
+@import "./component/reset";
+@import "./component/itemContainer";
+@import "./component/form";
+@import "./component/nav";
+
+#root {
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-surface);
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+  color: var(--color-text-primary);
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: contain;
+}
+
+.bg-dark {
+  background-image: url(./images/bg-desktop-dark.jpg);
+}
+
+.bg-light {
+  background-image: url(./images/bg-desktop-light.jpg);
+}
+
+.container {
+  width: 500px;
+  max-height: 700px;
+  display: grid;
+  gap: 2rem;
+  // position: sticky;
+  // top: 30%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+}

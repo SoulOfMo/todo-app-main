@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+/* Define Font Variables */
+:root {
+  /* Light Theme Colors */
+  --color-bg: hsl(0, 0%, 98%);
+  --color-surface: hsl(236, 33%, 92%);
+  --color-border: hsl(233, 11%, 84%);
+  --color-text-primary: hsl(235, 19%, 35%);
+  --color-text-secondary: hsl(236, 9%, 61%);
+  --color-text-hover: hsl(235, 21%, 11%);
+}
+
+.dark {
+  --color-bg: hsl(235, 24%, 19%);
+  --color-surface: hsl(235, 21%, 11%);
+  --color-border: hsl(237, 14%, 26%);
+  --color-border2: hsl(233, 14%, 35%);
+  --color-text-primary: hsl(234, 39%, 85%);
+  --color-text-secondary: hsl(234, 11%, 52%);
+  --color-text-hover: hsl(236, 33%, 92%);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+.item-container {
+  background-color: var(--color-bg);
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.item-container li {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+  padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+  justify-content: space-between;
+}
+.item-container li label input[type=checkbox] {
+  display: none;
+  position: absolute;
+  bottom: 30%;
+  left: 3%;
+  transform: translateX(50%) scale(1.2);
+}
+.item-container li label input[type=checkbox]:checked + .custom-radio {
+  background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.item-container li label input[type=checkbox]:checked + .custom-radio svg {
+  display: block;
+}
+.item-container li label .custom-radio {
+  display: grid;
+  place-content: center;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.item-container li label .custom-radio svg {
+  display: none;
+}
+.item-container li label .custom-radio:hover {
+  cursor: pointer;
+}
+.item-container li label p {
+  margin-left: 30px;
+  font-size: 1.4rem;
+}
+.item-container li label p:hover {
+  cursor: pointer;
+}
+.item-container li label .checked {
+  text-decoration: line-through;
+  color: var(--color-text-secondary);
+}
+.item-container li button {
+  background-color: transparent;
+  border: none;
+}
+.item-container .actions-container {
+  font-size: 1.2rem;
+  display: flex;
+  color: var(--color-text-secondary);
+  justify-content: space-between;
+  padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+}
+.item-container .actions-container span {
+  font-weight: 700;
+}
+.item-container .actions-container span:hover {
+  color: var(--color-text-hover);
+  cursor: pointer;
+  font-weight: 700;
+}
+.item-container .actions-container div {
+  display: flex;
+  gap: 1rem;
+  text-transform: capitalize;
+}
+.item-container .active {
+  color: hsl(220, 98%, 61%);
+}
+
+.input-container {
+  max-width: 500px;
+  position: relative;
+}
+.input-container .custom-radio {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+}
+.input-container input[type=text] {
+  width: 100%;
+  padding: 1.2rem 0 1.2rem 5rem;
+  border: none;
+  font-size: 1.5rem;
+  outline: none;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  border-radius: 5px;
+  font-weight: 400;
+}
+.input-container::first-letter {
+  text-transform: uppercase;
+}
+
+.nav {
+  color: hsl(0, 0%, 98%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav h1 {
+  letter-spacing: 1.5rem;
+  text-transform: uppercase;
+}
+
+#root {
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-surface);
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+  color: var(--color-text-primary);
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: contain;
+}
+
+.bg-dark {
+  background-image: url(./images/bg-desktop-dark.jpg);
+}
+
+.bg-light {
+  background-image: url(./images/bg-desktop-light.jpg);
+}
+
+.container {
+  width: 500px;
+  max-height: 700px;
+  display: grid;
+  gap: 2rem;
+}/*# sourceMappingURL=styles.css.map */
