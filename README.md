@@ -34,13 +34,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./design/active-states-dark.jpg)
 
 ### Links
 
-- Solution URL: [Solution](https://soulofmo.github.com/todo-app-main/)
+- Solution URL: [Solution](https://github.com/SoulOfMo/todo-app-main)
 - Live Site URL: [Live Site](https://soulofmo.github.io/todo-app-main/)
 
 ## My process
