@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-/* Define Font Variables */
+/*Font Variables */
 :root {
   /* Light Theme Colors */
   --color-bg: hsl(0, 0%, 98%);
@@ -89,19 +89,17 @@ li {
   display: flex;
   border-bottom: 1px solid var(--color-border);
   align-items: center;
-  padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
   justify-content: space-between;
+  font-size: 1.4rem;
 }
 .item-container li label {
   display: flex;
+  gap: 2rem;
   align-items: center;
 }
 .item-container li label input[type=checkbox] {
   display: none;
-  position: absolute;
-  bottom: 30%;
-  left: 3%;
-  transform: translateX(50%) scale(1.2);
 }
 .item-container li label input[type=checkbox]:checked + .custom-radio {
   background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
@@ -114,10 +112,8 @@ li {
   place-content: center;
   width: 18px;
   height: 18px;
-  position: absolute;
   border: 1px solid var(--color-border);
   border-radius: 50%;
-  margin-right: 1rem;
 }
 @media (max-width: 500px) {
   .item-container li label .custom-radio {
@@ -131,18 +127,6 @@ li {
 .item-container li label .custom-radio:hover {
   cursor: pointer;
 }
-.item-container li label p {
-  margin-left: 30px;
-  font-size: 1.4rem;
-}
-.item-container li label p:hover {
-  cursor: pointer;
-}
-@media (max-width: 500px) {
-  .item-container li label p {
-    font-size: 1.2rem;
-  }
-}
 .item-container li label .checked {
   text-decoration: line-through;
   color: var(--color-text-secondary);
@@ -151,6 +135,9 @@ li {
   background-color: transparent;
   border: none;
 }
+.item-container li button svg {
+  fill: var(--color-text-hover);
+}
 .item-container .actions-container {
   font-size: 1.2rem;
   display: flex;
@@ -158,13 +145,17 @@ li {
   justify-content: space-between;
   padding: 1.2rem 1.2rem 1.2rem 1.5rem;
 }
+@media (max-width: 500px) {
+  .item-container .actions-container {
+    font-size: 1rem;
+  }
+}
 .item-container .actions-container span {
   font-weight: 700;
 }
 .item-container .actions-container span:hover {
   color: var(--color-text-hover);
   cursor: pointer;
-  font-weight: 700;
 }
 .item-container .actions-container div {
   display: flex;
@@ -176,6 +167,10 @@ li {
     display: none;
   }
 }
+.item-container .actions-container .clear-btn:hover {
+  color: var(--color-text-hover);
+  cursor: pointer;
+}
 
 .input-container {
   max-width: 500px;
@@ -183,7 +178,7 @@ li {
 }
 .input-container .custom-radio {
   position: absolute;
-  top: 12px;
+  top: 13px;
   left: 15px;
   width: 18px;
   height: 18px;
@@ -241,19 +236,18 @@ li {
 .actions.mobile {
   font-size: 1.2rem;
   background-color: var(--color-bg);
-  display: flex;
   color: var(--color-text-secondary);
-  justify-content: space-between;
   text-transform: capitalize;
+  display: none;
   padding: 1.2rem 2rem 1.2rem 2rem;
 }
-.actions.mobile.mobile {
-  display: none;
+.actions.mobile span:hover {
+  color: var(--color-text-hover);
+  cursor: pointer;
 }
 @media (max-width: 500px) {
-  .actions.mobile.mobile {
+  .actions.mobile {
     display: flex;
-    justify-content: unset;
     gap: 1.5rem;
     place-content: center;
   }
@@ -301,13 +295,12 @@ main {
 
 .container {
   width: 500px;
-  max-height: 700px;
   display: grid;
   gap: 2rem;
 }
 @media (max-width: 500px) {
   .container {
-    width: 300px;
+    width: 350px;
     gap: 1.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */

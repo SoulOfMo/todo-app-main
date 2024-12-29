@@ -3,10 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //   position: sticky;
-  //   top: 30%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
   h1 {
     letter-spacing: 1.5rem;
     text-transform: uppercase;
@@ -17,8 +13,5 @@
     h1 {
       letter-spacing: 0.8rem;
     }
-    // svg {
-    //   aspect-ratio: 1/2;
-    // }
   }
 }

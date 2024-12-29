@@ -19,19 +19,17 @@ function App() {
   function handleSorted(sortby) {
     setSortBy(sortby);
   }
+
   function handleAddItem(item) {
     setTodoItems((items) => [...items, item]);
-    console.log(todoItems);
   }
 
   function handleDeleteItem(id) {
     setTodoItems((items) => items.filter((item) => item.id !== id));
-    console.log("oti lor");
   }
 
   function handleTheme() {
     setDarkTheme((curTheme) => (curTheme === "dark" ? "" : "dark"));
-    console.log(darkTheme);
   }
 
   function handleChecked(id) {
@@ -40,7 +38,6 @@ function App() {
         item.id === id ? { ...item, done: !item.done } : item
       )
     );
-    console.log("hhhh");
   }
 
   function handleClearList() {
@@ -98,11 +95,10 @@ function Form({ onAddItems }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (itemDesc === " ") return;
+    if (itemDesc.trim() === "") return;
 
     const newItem = { itemDesc, done: false, id: Date.now() };
     onAddItems(newItem);
-    console.log(newItem);
 
     setItemDesc("");
   }
@@ -193,7 +189,9 @@ function TodoList({
             completed
           </span>
         </div>
-        <p onClick={() => onClearList()}>Clear Completed</p>
+        <p className="clear-btn" onClick={() => onClearList()}>
+          Clear Completed
+        </p>
       </div>
     </div>
   );
